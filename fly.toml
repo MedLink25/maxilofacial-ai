@@ -1,0 +1,16 @@
+app = "maxilofacial-ai"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8000"
+
+[[services]]
+  internal_port = 8000
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+  [[services.ports]]
+    port = 443
